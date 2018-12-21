@@ -1,0 +1,9 @@
+<form #ref="ngForm" (ngSubmit)="testing(ref.value)">
+  enter name<br>
+  <input type="text" name="name" [(ngModel)]="name"><br>
+  enter password<br>
+  <input type="password" name="pwd" [(ngModel)]="pwd"><br>
+  <button type="submit">Login</button>
+  
+
+</form>

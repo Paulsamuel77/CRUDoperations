@@ -1,0 +1,10 @@
+<form #reference="ngForm" (ngSubmit)="postingtoTs(reference.value)">
+enter name<br>
+<input type="text" name="name" [(ngModel)]="name"><br>
+enter age<br>
+<input type="text" name="age" [(ngModel)]="age"><br>
+enter roll<br>
+<input type="text" name="roll" [(ngModel)]="roll"><br>
+<button type="submit"class="btn btn-warning">send</button>
+
+</form>

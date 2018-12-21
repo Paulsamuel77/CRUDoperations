@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <h1 class="text-warning text-center">Registration Form</h1>
+  <form #reference="ngForm" (ngSubmit)="testData(reference.value)">
+    enter First Name<br>
+  <input type="text" name="fname" [(ngModel)]="fname"><br>
+  
+  enter Email<br>
+  <input type="email" name="email" [(ngModel)]="email"><br>
+  
+
+  
+  enter Password<br>
+  <input type="text" name="password" [(ngModel)]="password"><br>
+  <button type="submit">Register</button>
+  
+  
+  </form>
+  </div>

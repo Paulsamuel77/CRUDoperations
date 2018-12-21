@@ -1,0 +1,66 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <th>name</th>
+    <th>age</th>
+    <th>roll</th>
+  </thead>
+
+  <tr *ngFor="let i of data">
+    <td>{{i.name}}</td>
+    <td>{{i.age}}</td>
+    <td>{{i.roll}}</td>
+   <td> <button type="button" (click)="editdata(i)"class="btn btn-primary" data-target="#m"
+ data-toggle="modal">Edit</button></td>
+ <td> <button type="button" (click)="deleteData(i._id)"class="btn btn-primary">Delete</button></td>
+  </tr>
+</table>
+
+<div class="modal"id="m">
+  <div class="modal-dialog">
+  <div class="modal-content">
+
+  <div class="modal-header text-center"><h4 class="text-dark">Edit</h4>
+      <button type="button"  class="close" data-dismiss="modal">X</button> 
+   </div>
+  <div class="modal-body">
+
+          <form #refs="ngForm" (ngSubmit)="editingData()">
+  <div class="row">
+    
+      <div class="col" >
+      <div class="form-group">
+      <label for="x">name</label>
+      <input type="text" id="x"   name="name" [(ngModel)]=sam.name class="form-control">
+      </div>
+      <div class="form-group">
+      <label for="x1">age:</label>
+      <input type="text" id="x1"  name="age" [(ngModel)]=sam.age class="form-control">
+      </div>
+      <div class="form-group">
+      <label for="x6">roll</label>
+      <input type="text" id="x6" name="roll" [(ngModel)]=sam.roll class="form-control">
+      </div>
+      <!-- <div class="form-group">
+          <label for="x2">Medicine Company:</label>
+          <input type="text" id="x2" #ref10 placeholder="Enter Medicine Company..." name="mcompany" [(ngModel)]=y.mcompany class="form-control">
+          </div>
+          <div class="form-group">
+          <label for="x3">Medicine Quantity:</label>
+          <input type="text" id="x3" #ref11 placeholder="Enter Medicine Quality..." name="mquantity" [(ngModel)]=y.mquantity class="form-control">
+          </div>
+          <div class="form-group">
+          <label for="x4">Medicine Price:</label>
+          <input type="text" id="x4" #ref12 placeholder="Enter Medicine Price..." name="mprice"[(ngModel)]=y.mprice class="form-control">
+          </div> -->
+
+          <!-- <div *ngIf=h></div> -->
+      <button type="submit" class="btn btn-success btn-block" >Save</button>
+      
+      </div>
+      </div>  
+      </form>
+      </div>
+      
+      </div>
+      </div>
+      </div>
